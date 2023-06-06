@@ -1,0 +1,25 @@
+# Run this command before running the script:
+> $ sudo apt-get remove -y libc6-dev
+sudo apt-get install -y gh
+
+# Login to Github
+
+gh auth login
+
+gh repo clone crypt0lith/kali-setup
+sudo chmod +x $HOME/kali-setup/kali-setup.sh
+sudo ./kali-setup/kali-setup.sh
+
+# Paste 'path-config' in terminal and run commands
+
+> $ exec $SHELL
+
+> $ source ${HOME}/kali-setup/kali-setup2.sh
+
+> $ sudo shutdown -h now
+
+# After running the script, open Powershell as administrator and run this command:
+> Set-VM "('YOUR VM NAME')" -EnhancedSessionTransportType HVSocket
+
+# [EXAMPLE] If your VM was named "kali-client", you would run the command:
+> Set-VM "kali-client" -EnhancedSessionTransportType HVSocket
